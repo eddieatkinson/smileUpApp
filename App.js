@@ -13,12 +13,9 @@ function App() {
   const isLoadingComplete = useCachedResources();
   const colorScheme = useColorScheme();
   useEffect(() => {
-    console.log(testStore);
     setTestStore(["hey"]);
   }, []);
-  useEffect(() => {
-    console.log(testStore);
-  }, [testStore]);
+  useEffect(() => {}, [testStore]);
   if (!isLoadingComplete) {
     return null;
   } else {
